@@ -1,5 +1,7 @@
 import { View, Image, Text, StatusBar, StyleSheet, SafeAreaView, ScrollView } from "react-native"
 import { planetas } from "./planetas.js"
+import Planeta from "./listplaneta.js"
+
 
 export default function App() {
   return (
@@ -14,7 +16,7 @@ export default function App() {
         <Text style={
           styles.text
         } >
-          Vamos Explorar
+          Vamos Explorar!
         </Text>
         <Image style={
           styles.img
@@ -22,86 +24,104 @@ export default function App() {
       </View>
 
       <ScrollView >
+        {/*     
+        {planetas.map((item) => (
+          <View style={styles.card}>
+            <View style={
+              styles.areatitulo
+            }>
+              <Text style={styles.titulo}>
+                {item.nome}
+              </Text>
+              <Image style={
+                styles.imgcard
+              } source={require("./assets/imgastro.jpg")} />
+            </View>
 
-        <View style={styles.card}>
-          <View style={
-            styles.areatitulo
-          }>
-            <Text style={styles.titulo}>
-              Terra
-            </Text>
-            <Image style={
-              styles.imgcard
-            } source={require("./assets/imgastro.jpg")} />
+            <View>
+              <View style={
+                styles.descricao
+              }>
+                <Text style={
+                  styles.elementos
+                }>
+                  Velocidade Orbital Média
+                </Text>
+                <Text style={
+                  styles.texts
+                } >
+                  {item.velocidadeOrbitalMediaKm} km/s
+                </Text>
+              </View>
+
+              <View style={
+                styles.descricao
+              } >
+                <Text style={
+                  styles.elementos
+                }>
+                  Satélis
+                </Text>
+                <Text style={
+                  styles.texts
+                }>
+                  {item.quantidadeSatelites}
+                </Text>
+              </View>
+
+              <View style={
+                styles.descricao
+              } >
+                <Text style={
+                  styles.elementos
+                }>
+                  Aréa da superficie
+                </Text>
+                <Text style={
+                  styles.texts
+                }>
+                  {item.areaSuperficieKm2} km2
+                </Text>
+              </View>
+
+              <View style={
+                styles.descricao
+              }>
+                <Text style={
+                  styles.elementos
+                } >
+                  Período de Rotação
+                </Text>
+                <Text style={
+                  styles.texts
+                }>
+                  {item.periodoRotacaoDias}
+                </Text>
+              </View>
+
+            </View> 
+            
+
+            
+
           </View>
 
-          <View>
-            <View style={
-              styles.descricao
-            }>
-              <Text style={
-                styles.elementos
-              }>
-                Velocidade Orbital Média
-              </Text>
-              <Text style={
-                styles.texts
-              } >
-                29.79 km/s
-              </Text>
-            </View>
 
-            <View style={
-              styles.descricao
-            } >
-              <Text style={
-                styles.elementos
-              }>
-                Satélis
-              </Text>
-              <Text style={
-                styles.texts
-              }>
-                1
-              </Text>
-            </View>
+        ))}
 
-            <View style={
-              styles.descricao
-            } >
-              <Text style={
-                styles.elementos
-              }>
-                Aréa da superficie
-              </Text>
-              <Text style={
-                styles.texts
-              }>
-                510.100.000 km2
-              </Text>
-            </View>
+*/}
+        {planetas.map((item) => (
 
-            <View style={
-              styles.descricao
-            }>
-              <Text style={
-                styles.elementos
-              } >
-                Período de Rotação
-              </Text>
-              <Text style={
-                styles.texts
-              }>
-                1D
-              </Text>
-            </View>
-          </View>
-
-        </View>
+          <Planeta item={
+            planetas
+          } key={item.nome} />))}
 
       </ScrollView>
+
+
     </SafeAreaView>
   )
+
 }
 
 
@@ -113,16 +133,20 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   text: {
+    color:"#fff",
     fontSize: 18,
-    fontWeight: "bold"
+  
+    Color: "#fff",
   },
   img: {
-    width: 150,
-    height: 120,
+    borderRadius: 50,
+    width: 100,
+    height: 100,
   },
   top: {
+    backgroundColor: "#1F2B45",
     flex: 1,
-    marginTop: 100,
+
   },
 
   card: {
@@ -145,22 +169,22 @@ const styles = StyleSheet.create({
     width: 270,
     height: 270,
   },
-  descricao:{
-    flexDirection:"row",
-    justifyContent:"space-between",
+  descricao: {
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
-  elementos:{
-    color:"#bababa",
+  elementos: {
+    color: "#bababa",
   },
-  texts:{
-    color:"#fff",
+  texts: {
+    color: "#fff",
   }
-  
-  
 
-  
 
-  
+
+
+
+
 
 
 
