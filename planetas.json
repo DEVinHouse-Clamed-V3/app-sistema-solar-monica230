@@ -1,6 +1,6 @@
 [
     {
-        "img": "./assets/terra.jpg",
+        "img": "https://segredosdomundo.r7.com/wp-content/uploads/2020/01/planeta-terra-conheca-tudo-sobre-o-nosso-planeta-natal.jpg",
         "nome": "Terra",
         "descricaoBreve": "O único planeta conhecido por abrigar vida.",
         "descricao": "A Terra tem uma atmosfera rica em oxigênio e é coberta por água em sua maior parte, o que possibilita a vida como a conhecemos. O planeta também possui uma superfície diversificada com montanhas, oceanos e desertos.",
@@ -17,7 +17,7 @@
         "quantidadeSatelites": 0,
         "areaSuperficieKm2": 460200000,
         "velocidadeOrbitalMediaKmS": 35.02,
-        "periodoRotacaoDias": 243
+"periodoRotacaoDias": 243
     },
     {
         "img": "https://segredosdomundo.r7.com/wp-content/uploads/2020/01/planeta-terra-conheca-tudo-sobre-o-nosso-planeta-natal.jpg",
