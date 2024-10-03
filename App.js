@@ -28,7 +28,7 @@ export default function App() {
             </View>
 
             {/* <ScrollView >
-                   
+                
                 {planetas.map((item) => (
                 <View style={styles.card}>
                     <View style={
